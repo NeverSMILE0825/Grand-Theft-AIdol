@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Bodoni+Moda:ital,wght@1,500;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Permanent+Marker&family=Racing+Sans+One&display=swap');
 :root {
-  --ink:#080910;--ink2:#10121b;--paper:#f3f1f6;--muted:#c5c6d2;--dim:#b4b6c6;
-  --pink:#ff469a;--pink-hot:#ff168b;--cyan:#55eeff;--orange:#ff9e68;--purple:#a574fa;
-  --font-display:'Barlow Condensed','Arial Narrow',Impact,sans-serif;
-  --font-editorial:'Bodoni Moda','Didot','Bodoni MT','Times New Roman',serif;
+  --ink:#070814;--ink2:#12101f;--paper:#f7f2ea;--muted:#d5d0dc;--dim:#c4bed0;
+  --pink:#ff3f98;--pink-hot:#ff168b;--cyan:#5cefff;--orange:#ffb15a;--purple:#b388ff;
+  --font-poster:'Archivo Black','Arial Black',Impact,sans-serif;
+  --font-action:'Racing Sans One','Arial Narrow',Impact,sans-serif;
+  --font-script:'Permanent Marker','Comic Sans MS',cursive;
+  --font-display:var(--font-poster);
+  --font-editorial:var(--font-script);
   --font-body:'DM Sans',Arial,Helvetica,sans-serif;
   --container:1380px;--header:84px;--ease:cubic-bezier(.19,1,.22,1);
 }

@@ -168,7 +168,7 @@
   const tradeUrl = cleanUrl(settings.uniswapUrl) || (contract ? `https://app.uniswap.org/swap?chain=ethereum&inputCurrency=ETH&outputCurrency=${encodeURIComponent(contract)}` : '');
   if (contract) {
     contractText.textContent = contract;
-    contractStatus.textContent = 'ETHEREUM MAINNET / PUBLIC ADDRESS';
+    contractStatus.textContent = 'Ethereum mainnet · public address';
     copyButton.disabled = false;
     copyButton.addEventListener('click', async () => {
       try {
@@ -177,8 +177,8 @@
           const input = doc.createElement('textarea'); input.value = contract; doc.body.appendChild(input);
           input.select(); if (!doc.execCommand('copy')) throw new Error('Copy unsupported'); input.remove();
         }
-        showToast('CONTRACT ADDRESS COPIED');
-      } catch (_) { showToast('COULD NOT COPY — PLEASE SELECT THE ADDRESS'); }
+        showToast('Contract address copied');
+      } catch (_) { showToast('Could not copy. Select the address instead.'); }
     });
   }
   if (contract && tradeUrl) {
@@ -187,19 +187,19 @@
     tradeLink.rel = 'noopener noreferrer';
     tradeLink.classList.remove('is-unavailable');
     tradeLink.removeAttribute('aria-disabled');
-    tradeLink.removeAttribute('tabindex');
-    $('.token__cta-row>span').textContent = 'ALWAYS VERIFY THE CONTRACT ADDRESS BEFORE SWAPPING.';
+    tradeLink.textContent = 'Trade on Uniswap';
+    $('.token__cta-row>span').textContent = 'Verify the contract address yourself before swapping.';
   }
 
   const social = $('#communityLinks');
   if (social) {
-    const links = [{ name: 'X community', value: cleanUrl(settings.xUrl) }, { name: 'Telegram crew', value: cleanUrl(settings.telegramUrl) }];
+    const links = [{ name: 'X', value: cleanUrl(settings.xUrl) }, { name: 'Telegram', value: cleanUrl(settings.telegramUrl) }];
     social.replaceChildren();
     links.forEach(({ name, value }) => {
       const item = doc.createElement(value ? 'a' : 'span');
       item.className = `btn btn--outline${value ? '' : ' btn--pending'}`;
       item.dataset.social = name.startsWith('X') ? 'x' : 'telegram';
-      item.textContent = value ? name + ' ↗' : name + ' / Coming soon';
+      item.textContent = value ? name : name + ' — Coming soon';
       if (value) { item.href = value; item.target = '_blank'; item.rel = 'noopener noreferrer'; }
       social.appendChild(item);
     });
@@ -207,10 +207,10 @@
 
   // Mission carousel/tabpanel is keyboard-operable.
   const missions = [
-    { eyebrow: 'Chapter 01 — The arrival', title: 'Welcome to<br>Vice City.', desc: "Claudia touches down. A new chapter opens. The city doesn't know what's coming.", image: 'mission-arrival.webp', alt: 'Claudia arriving beside a private jet at sunset in a neon coastal city.' },
-    { eyebrow: 'Chapter 02 — The takeover', title: 'No more<br>permission.', desc: 'A skyline-size projection. Every screen is hers. The algorithm just crossed into the real world.', image: 'mission-takeover.webp', alt: 'Claudia overlooking an illuminated city from a rooftop as her giant projection lights up the skyline.' },
-    { eyebrow: 'Chapter 03 — Five stars', title: 'Turn up<br>the heat.', desc: 'Police lights, an open ocean, and the whole city watching. The fictional chase is on.', image: 'mission-five-stars.webp', alt: 'A pink speedboat racing across the bay pursued by police boats and helicopters.' },
-    { eyebrow: 'Chapter 04 — City legend', title: 'Built to<br>be remembered.', desc: 'The lights never fade. A star that started as code becomes the legend of Vice City.', image: 'mission-city-legend.webp', alt: 'Claudia above a waterfront skyline illuminated by a giant neon portrait of her.' }
+    { eyebrow: 'Mission 01 — The arrival', title: 'Touchdown<br>in Vice', desc: 'The jet lands, the cameras turn, and Claudia makes her first entrance into the city.', image: 'mission-arrival.webp', alt: 'Claudia arriving beside a private jet at sunset in a neon coastal city.' },
+    { eyebrow: 'Mission 02 — The takeover', title: 'Light up<br>the skyline', desc: 'From a rooftop to a city-sized hologram, Claudia’s signal reaches every corner of the night.', image: 'mission-takeover.webp', alt: 'Claudia overlooking an illuminated city from a rooftop as her giant projection lights up the skyline.' },
+    { eyebrow: 'Mission 03 — Five stars', title: 'Sirens after<br>the show', desc: 'The spotlight follows her onto the streets. So do the sirens.', image: 'mission-five-stars.webp', alt: 'A pink speedboat racing across the bay pursued by police boats and helicopters.' },
+    { eyebrow: 'Mission 04 — City legend', title: 'The night belongs<br>to the show', desc: 'One last performance. One unforgettable view. Claudia leaves her mark on the skyline.', image: 'mission-city-legend.webp', alt: 'Claudia above a waterfront skyline illuminated by a giant neon portrait of her.' }
   ];
   const missionTabs = $$('.mission-tab');
   const missionView = $('#missionPanel');
@@ -257,13 +257,13 @@
   // Lightbox: image gallery with keyboard arrows, ESC, backdrop click, and focus restoration.
   const galleryItems = [
     { title: '01 / The Strip', file: 'city-nightlife.webp', alt: 'Neon nightlife street, sports cars and moonlit coastal skyline' },
-    { title: '02 / Above the city', file: 'rooftop-sunset.webp', alt: 'Claudia looking at a glowing bay from a rooftop at sunset' },
+    { title: '02 / Rooftop sunset', file: 'rooftop-sunset.webp', alt: 'Claudia looking at a glowing bay from a rooftop at sunset' },
     { title: '03 / After hours', file: 'nightclub.webp', alt: 'Claudia at a neon nightclub bar overlooking the waterfront' },
     { title: '04 / The blue hour', file: 'city-night.webp', alt: 'Moonlit Vice City skyline reflected on the ocean' },
-    { title: '05 / The arrival', file: 'arrival-supercar.webp', alt: 'Claudia leaning against her pink sports car' },
-    { title: '06 / Popstar', file: 'stage-idol.webp', alt: 'Claudia performing onstage' },
-    { title: '07 / The heat', file: 'police-chase.webp', alt: 'High-speed nighttime police pursuit' },
-    { title: '08 / The dossier', file: 'wanted-dossier.webp', alt: 'Vice City police dossier containing Claudia photographs' }
+    { title: '05 / Waterfront arrival', file: 'arrival-supercar.webp', alt: 'Claudia leaning against her pink sports car' },
+    { title: '06 / The show', file: 'stage-idol.webp', alt: 'Claudia performing onstage' },
+    { title: '07 / The chase', file: 'police-chase.webp', alt: 'High-speed nighttime police pursuit' },
+    { title: '08 / The casefile', file: 'wanted-dossier.webp', alt: 'Vice City police dossier containing Claudia photographs' }
   ];
   const dialog = $('#galleryDialog');
   const galleryImage = $('#galleryImage');
@@ -302,7 +302,8 @@
   // Story picture cards open a relevant image instead of being inert focus targets.
   $$('.episode').forEach((episode, index) => {
     episode.setAttribute('role', 'button');
-    episode.setAttribute('aria-label', `View story image ${index + 1}`);
+    const sceneNames = ['the arrival', 'the show', 'the chase'];
+    episode.setAttribute('aria-label', `Open ${sceneNames[index]} scene`);
     const galleryIndexForEpisode = [4, 5, 6][index];
     episode.addEventListener('click', () => openGallery(galleryIndexForEpisode));
     episode.addEventListener('keydown', event => {
