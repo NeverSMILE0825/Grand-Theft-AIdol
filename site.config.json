@@ -1,0 +1,9 @@
+{
+  "brand": {
+    "name": "Grand Theft AIdol",
+    "ticker": "$GTA"
+  },
+  "analytics": {
+    "apiOrigin": "https://gtaidol.103.161.35.238.sslip.io"
+  }
+}

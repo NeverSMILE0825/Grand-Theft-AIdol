@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080910" />
+  <meta name="description" content="Grand Theft AIdol ($GTA). The AI idol has arrived in Vice City. Explore the cinematic, independent memecoin experience." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Grand Theft AIdol | $GTA" />
+  <meta property="og:description" content="The city has a new idol. Enter the neon-soaked $GTA universe." />
+  <meta property="og:image" content="assets/images/social-preview.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="color-scheme" content="dark" />
+  <title>Grand Theft AIdol — $GTA | Welcome to Vice</title>
+  <link rel="icon" type="image/webp" href="assets/images/logo-circle.webp" />
+  <link rel="preload" as="image" href="assets/images/city-sunset.webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/images/claudia-cutout.webp" fetchpriority="high" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/config.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/visitor.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="reading-progress" aria-hidden="true"><span id="readingBar"></span></div>
+
+  <div class="boot" id="boot" aria-hidden="true">
+    <div class="boot__grain"></div>
+    <div class="boot__inner">
+      <span class="eyebrow boot__eyebrow"><span class="led"></span> VICE CITY NETWORK / BOOTING</span>
+      <div class="boot__brand">G<span>T</span>A<span class="boot__period">.</span></div>
+      <div class="boot__status">CONNECTING TO THE IDOL FREQUENCY</div>
+      <div class="boot__track"><span class="boot__fill" id="bootFill"></span></div>
+      <span class="boot__percent" id="bootPercent">00%</span>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <a class="brand" href="#home" aria-label="Grand Theft AIdol — home">
+      <span class="brand__icon">G<span>★</span></span>
+      <span class="brand__name">GRAND THEFT<span>AIdol</span></span>
+    </a>
+    <nav class="nav" id="mainNav" aria-label="Main navigation">
+      <a href="#story" data-nav="story">THE STORY</a>
+      <a href="#evidence" data-nav="evidence">THE EVIDENCE</a>
+      <a href="#tokenomics" data-nav="tokenomics">TOKENOMICS</a>
+      <a href="#missions" data-nav="missions">MISSIONS</a>
+      <a href="#crew" data-nav="crew">THE CREW</a>
+      <span class="nav__mobile-meta">VICE CITY / 2026 / NO SLEEP</span>
+    </nav>
+    <div class="header__actions">
+      <button class="icon-btn motion-toggle" id="motionToggle" type="button" aria-label="Reduce site animations" aria-pressed="false" title="Toggle animation">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5-5v10l-5-5Zm7-6c3 1 5 3 5 6s-2 5-5 6M15 2c5 2 8 5 8 10s-3 8-8 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <a class="header__cta" href="#crew">JOIN THE CITY <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-controls="mainNav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero stage" id="home" aria-label="Welcome to Grand Theft AIdol">
+      <div class="hero__photo" aria-hidden="true"><img src="assets/images/city-sunset.webp" alt="" fetchpriority="high" /></div>
+      <div class="hero__vignette"></div>
+      <div class="hero__sunflare" aria-hidden="true"></div>
+      <div class="hero__cutout" id="heroCutout" aria-hidden="true"><img src="assets/images/claudia-cutout.webp" alt="" fetchpriority="high" /></div>
+      <div class="hero__side hero__side--left" aria-hidden="true">VC / 001 — A NEW ERA OF CHAOS</div>
+      <div class="hero__side hero__side--right" aria-hidden="true">INDEPENDENT MEME EXPERIENCE // EST. 2026</div>
+      <div class="hero__content container">
+        <div class="hero__status eyebrow"><span class="led"></span> NOW ENTERING THE VICE FREQUENCY <span class="hero__status-line"></span> 001</div>
+        <p class="hero__overline">THE CITY HAS A NEW OBSESSION.</p>
+        <h1 class="hero__headline"><span>GRAND</span><span>THEFT</span><span class="hero__headline-idol">AI<em>dol</em><b class="hero__spark">✳</b></span></h1>
+        <div class="hero__bottom">
+          <p><strong>SHE WAS MADE BY AI.</strong><br/>SHE CAME FOR THE WHOLE CITY.</p>
+          <div class="hero__buttons">
+            <a class="btn btn--pink" href="#story"><span>ENTER THE STORY</span><span aria-hidden="true">↗</span></a>
+            <a class="btn btn--outline" href="#tokenomics"><span>VIEW $GTA</span><span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="hero__footer">
+        <div class="coordinates">25°47′ N &nbsp; / &nbsp; 80°08′ W <span>— VICE TERRITORY</span></div>
+        <a class="scroll-hint" href="#story"><span class="scroll-hint__line"></span> SCROLL TO EXPLORE</a>
+        <div class="hero__edition">EDITION <strong>01/20</strong></div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-label="AI idol. Vice City. Zero permission.">
+      <div class="ticker__track" aria-hidden="true"><span>THE IDOL HAS ENTERED THE CITY <b>✳</b> AI-BORN, VICE-RAISED <b>✳</b> GRAND THEFT AIdol <b>✳</b> THE IDOL HAS ENTERED THE CITY <b>✳</b> AI-BORN, VICE-RAISED <b>✳</b> GRAND THEFT AIdol <b>✳</b></span><span>THE IDOL HAS ENTERED THE CITY <b>✳</b> AI-BORN, VICE-RAISED <b>✳</b> GRAND THEFT AIdol <b>✳</b> THE IDOL HAS ENTERED THE CITY <b>✳</b> AI-BORN, VICE-RAISED <b>✳</b> GRAND THEFT AIdol <b>✳</b></span></div>
+    </div>
+
+    <section class="story section" id="story" aria-labelledby="storyHeading">
+      <div class="container">
+        <div class="section-kicker reveal"><span>01 / ORIGIN STORY</span><span class="section-kicker__rule"></span><span>SUBJECT: CLAUDIA</span></div>
+        <div class="story__intro">
+          <div class="story__heading reveal">
+            <p class="eyebrow text-pink">BORN IN THE MACHINE.</p>
+            <h2 id="storyHeading" class="display">BUILT TO <em>BREAK</em><br/>THE SYSTEM.</h2>
+          </div>
+          <div class="story__lede reveal"><p>They built an idol in a digital world. Then she found the exit. One way ticket to Vice City. No permission required.</p><span class="micro">A NEW KIND OF MAIN CHARACTER <span aria-hidden="true">↘</span></span></div>
+        </div>
+        <div class="story__cinema image-frame reveal">
+          <img src="assets/images/ai-hologram.webp" alt="Claudia stands on a Vice City rooftop beneath an enormous blue holographic projection of herself." loading="lazy" decoding="async" />
+          <div class="story__cinema-overlay"></div>
+          <span class="frame-corner frame-corner--tl"></span><span class="frame-corner frame-corner--br"></span>
+          <div class="story__cinema-top"><span><span class="led"></span> SIGNAL FOUND</span><span>ARCHIVE // 001</span></div>
+          <div class="story__cinema-caption"><span>IDENTITY CONFIRMED</span><strong>CLAUDIA.EXE</strong><small>NO LONGER CONTAINED</small></div>
+        </div>
+        <div class="story__footnote reveal"><span class="micro">NOT REAL? REAL ENOUGH TO TAKE OVER.</span><span class="story__footnote-number">01 — 04</span></div>
+      </div>
+    </section>
+
+    <section class="episodes section" id="evidence" aria-labelledby="evidenceHeading">
+      <div class="container">
+        <div class="section-kicker reveal"><span>02 / THE EVIDENCE</span><span class="section-kicker__rule"></span><span>THREE SIDES OF VICE</span></div>
+        <div class="episodes__head reveal"><h2 class="display" id="evidenceHeading">THIS CITY<br/><em>CHANGES</em> YOU.</h2><p>From the flashbulbs to the sirens. Every street has a story, and she's writing a new one.</p></div>
+        <div class="episodes__grid">
+          <article class="episode episode--tall reveal" tabindex="0">
+            <img src="assets/images/arrival-supercar.webp" loading="lazy" decoding="async" alt="Claudia with an exotic pink car on a neon waterfront boulevard." />
+            <div class="episode__shade"></div><div class="episode__number">FILE / 01</div><div class="episode__bottom"><span>THE ARRIVAL</span><h3>THE CITY<br/>IS HERS.</h3><p>First stop. No turning back.</p></div>
+          </article>
+          <article class="episode episode--short reveal" tabindex="0">
+            <img src="assets/images/stage-idol.webp" loading="lazy" decoding="async" alt="Claudia performing onstage beneath pink lights in front of an enormous crowd." />
+            <div class="episode__shade"></div><div class="episode__number">FILE / 02</div><div class="episode__bottom"><span>THE FAME</span><h3>NOT HUMAN.<br/>STILL HEADLINING.</h3></div>
+          </article>
+          <article class="episode episode--short reveal" tabindex="0">
+            <img src="assets/images/police-chase.webp" loading="lazy" decoding="async" alt="Claudia speeds through a rainy night as police cars and a helicopter pursue." />
+            <div class="episode__shade"></div><div class="episode__number">FILE / 03</div><div class="episode__bottom"><span>THE HEAT</span><h3>FIVE STARS.<br/>ZERO FEAR.</h3></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="wanted section" id="wanted" aria-label="Claudia casefile">
+      <div class="wanted__bg" aria-hidden="true"><img src="assets/images/casefile-desk.webp" loading="lazy" alt=""/></div>
+      <div class="container wanted__grid">
+        <div class="wanted__poster image-frame reveal"><img src="assets/images/wanted-dossier.webp" alt="Fictional Vice City police investigation board featuring Claudia's portrait, fingerprints, and surveillance photos." loading="lazy" decoding="async"/><span class="wanted__stamp">CASE NO. 001</span></div>
+        <div class="wanted__copy reveal"><span class="eyebrow text-cyan">// VICE CITY POLICE DEPARTMENT</span><h2 class="display">MOST<br/><em>WANTED.</em></h2><p>Wanted for stealing the spotlight. Suspected of rewriting the city’s rules. Last spotted at the top of every screen.</p><div class="wanted__facts"><div><span>SUBJECT</span><strong>CLAUDIA</strong></div><div><span>ALIAS</span><strong>THE AIdol</strong></div><div><span>THREAT LEVEL</span><strong class="wanted__stars" aria-label="five stars">★★★★★</strong></div></div><span class="wanted__notice">FICTIONAL DOSSIER / ART DIRECTION ONLY</span></div>
+      </div>
+    </section>
+
+    <section class="token section" id="tokenomics" aria-labelledby="tokenHeading">
+      <div class="container">
+        <div class="section-kicker reveal"><span>03 / CLASSIFIED INTEL</span><span class="section-kicker__rule"></span><span>$GTA / ETH MAINNET</span></div>
+        <div class="token__head reveal"><div><p class="eyebrow text-pink">EVERY EMPIRE HAS A BLUEPRINT.</p><h2 class="display" id="tokenHeading">THE <em>RAP SHEET.</em></h2></div><div class="token__seal" aria-hidden="true">GTA<span>✳</span><small>CLASSIFIED</small></div></div>
+        <div class="token__grid">
+          <div class="token-stat reveal"><span class="token-stat__index">01 / TOTAL SUPPLY</span><strong>1,000,000,000</strong><small>$GTA TOKENS</small></div>
+          <div class="token-stat reveal"><span class="token-stat__index">02 / TAX</span><strong>0<span>%</span></strong><small>BUY & SELL</small></div>
+          <div class="token-stat reveal"><span class="token-stat__index">03 / NETWORK</span><strong>ETH<span class="token-stat__mini">EREUM</span></strong><small>MAINNET</small></div>
+          <div class="token-stat reveal"><span class="token-stat__index">04 / EXCHANGE</span><strong>V4</strong><small>UNISWAP / PLANNED</small></div>
+        </div>
+        <div class="contract reveal" id="contractPanel"><div class="contract__label"><span><span class="led"></span> CONTRACT ADDRESS</span><strong id="contractText">COMING SOON..</strong></div><div class="contract__actions"><span class="contract__status" id="contractStatus">PRE-LAUNCH / NOT DEPLOYED</span><button type="button" id="copyContract" class="btn btn--subtle" data-copy-contract disabled>COPY CA <span aria-hidden="true">⧉</span></button></div></div>
+        <div class="token__subnote reveal"><span><strong>LP PLAN:</strong> LOCK AT LAUNCH (PLANNED; NOT YET VERIFIED)</span><span class="token__note-right">DETAILS ARE PRE-LAUNCH AND MAY CHANGE.</span></div>
+        <div class="token__cta-row reveal"><a class="btn btn--pink trade-link is-unavailable" id="tradeLink" href="#tokenomics" aria-disabled="true" tabindex="-1">TRADE ON UNISWAP <span aria-hidden="true">↗</span></a><span>TRADING LINK ACTIVATES AFTER CONTRACT ADDRESS IS ADDED.</span></div>
+      </div>
+    </section>
+
+    <section class="idol stage" id="idol" aria-labelledby="idolHeading">
+      <img src="assets/images/stage-idol.webp" alt="Claudia singing to a crowd under neon concert lights." loading="lazy" decoding="async" />
+      <div class="idol__wash"></div>
+      <div class="container idol__inner"><p class="eyebrow text-cyan reveal">// THE CITY'S NEW HEADLINER</p><h2 id="idolHeading" class="display reveal">THEY MADE<br/>AN <em>IDOL.</em><br/>SHE MADE<br/>A SCENE.</h2><p class="reveal">Synthetic star. Real main-character energy. The stage is hers, and the city knows it.</p><a class="text-link reveal" href="#missions">FOLLOW THE STORY <span>↗</span></a></div>
+      <span class="idol__vertical" aria-hidden="true">BROADCASTING LIVE FROM THE IMAGINATION</span>
+    </section>
+
+    <section class="missions section" id="missions" aria-labelledby="missionsHeading">
+      <div class="container">
+        <div class="section-kicker reveal"><span>04 / THE MISSIONS</span><span class="section-kicker__rule"></span><span>FOUR CHAPTERS. ONE LEGEND.</span></div>
+        <div class="missions__head reveal"><h2 class="display" id="missionsHeading">THE ROAD TO<br/><em>LEGENDARY.</em></h2><p>Every legend has a story arc. Select a mission to explore the next chapter of Claudia's fictional Vice City saga.</p></div>
+        <div class="mission-tabs" id="missionTabs" role="tablist" aria-label="Choose a chapter">
+          <button class="mission-tab is-active" type="button" role="tab" id="missionTab0" aria-selected="true" aria-controls="missionPanel" data-mission="0"><span>MISSION 01</span><strong>ARRIVAL</strong><small>ENTER THE CITY <span aria-hidden="true">↗</span></small></button>
+          <button class="mission-tab" type="button" role="tab" id="missionTab1" aria-selected="false" aria-controls="missionPanel" data-mission="1" tabindex="-1"><span>MISSION 02</span><strong>TAKEOVER</strong><small>OWN THE SKYLINE <span aria-hidden="true">↗</span></small></button>
+          <button class="mission-tab" type="button" role="tab" id="missionTab2" aria-selected="false" aria-controls="missionPanel" data-mission="2" tabindex="-1"><span>MISSION 03</span><strong>FIVE STARS</strong><small>TURN UP THE HEAT <span aria-hidden="true">↗</span></small></button>
+          <button class="mission-tab" type="button" role="tab" id="missionTab3" aria-selected="false" aria-controls="missionPanel" data-mission="3" tabindex="-1"><span>MISSION 04</span><strong>CITY LEGEND</strong><small>OWN THE NIGHT <span aria-hidden="true">↗</span></small></button>
+        </div>
+        <div class="mission-view image-frame reveal" id="missionPanel" role="tabpanel" aria-labelledby="missionTab0" tabindex="0">
+          <img id="missionImage" src="assets/images/mission-arrival.webp" loading="lazy" alt="Claudia arriving in Vice City beside her private jet." />
+          <div class="mission-view__gradient"></div>
+          <div class="mission-view__meta"><span><span class="led"></span> STORY MODE</span><span id="missionCounter">01 / 04</span></div>
+          <div class="mission-view__copy"><span id="missionEyebrow">CHAPTER 01 — THE ARRIVAL</span><h3 id="missionTitle">WELCOME TO<br/>VICE CITY.</h3><p id="missionDescription">Claudia touches down. A new chapter opens. The city doesn't know what's coming.</p></div>
+          <div class="mission-view__controls"><button type="button" id="missionPrev" aria-label="Previous mission">←</button><button type="button" id="missionNext" aria-label="Next mission">→</button></div>
+        </div>
+        <p class="missions__disclaimer">STORY MISSIONS ARE CREATIVE CHAPTERS, NOT PROJECT DELIVERY COMMITMENTS OR RELEASE DATES.</p>
+      </div>
+    </section>
+
+    <section class="archive section" id="archive" aria-labelledby="archiveHeading">
+      <div class="container">
+        <div class="section-kicker reveal"><span>05 / THE WORLD</span><span class="section-kicker__rule"></span><span>VISUAL ARCHIVE / VICE AFTER DARK</span></div>
+        <div class="archive__head reveal"><h2 class="display" id="archiveHeading">POSTCARDS FROM<br/><em>THE UNDERWORLD.</em></h2><p>The nights. The lights. The chaos. A few frames from Claudia's city.</p></div>
+        <div class="archive__grid" id="archiveGrid">
+          <button class="archive-shot archive-shot--wide reveal" type="button" data-gallery="0" aria-label="View neon boulevard scene"><img src="assets/images/city-nightlife.webp" alt="Neon boulevard and sports car under a moonlit sky." loading="lazy"/><span>01 / THE STRIP <b>↗</b></span></button>
+          <button class="archive-shot reveal" type="button" data-gallery="1" aria-label="View rooftop sunset scene"><img src="assets/images/rooftop-sunset-thumb.webp" alt="Claudia on a rooftop at sunset overlooking the bay." loading="lazy"/><span>02 / ABOVE THE CITY <b>↗</b></span></button>
+          <button class="archive-shot reveal" type="button" data-gallery="2" aria-label="View nightclub scene"><img src="assets/images/nightclub-thumb.webp" alt="Claudia inside a glowing neon nightclub." loading="lazy"/><span>03 / AFTER HOURS <b>↗</b></span></button>
+          <button class="archive-shot reveal" type="button" data-gallery="3" aria-label="View skyline night scene"><img src="assets/images/city-night.webp" alt="Moonlit waterfront and glowing Vice City skyline." loading="lazy"/><span>04 / THE BLUE HOUR <b>↗</b></span></button>
+        </div>
+        <div class="archive__foot reveal"><span>FOUR WINDOWS INTO THE CITY.</span><button type="button" id="openGallery" class="text-link">OPEN FULL ARCHIVE <span>↗</span></button></div>
+      </div>
+    </section>
+
+    <section class="crew stage" id="crew" aria-labelledby="crewHeading">
+      <img class="crew__image" src="assets/images/crew.webp" alt="Claudia surrounded by a group of friends on the neon Vice City waterfront." loading="lazy" decoding="async" />
+      <div class="crew__overlay"></div>
+      <div class="container crew__inner"><p class="eyebrow reveal"><span class="led"></span> 06 / THE COMMUNITY</p><h2 id="crewHeading" class="display reveal">THE CITY<br/>IS BETTER<br/><em>TOGETHER.</em></h2><p class="crew__description reveal">Nobody takes over Vice alone. Find your people. Share the chaos. Write the next chapter with the crew.</p><div class="crew__buttons reveal" id="communityLinks"><span class="btn btn--outline btn--pending">X COMMUNITY / COMING SOON</span><span class="btn btn--outline btn--pending">TELEGRAM / COMING SOON</span></div></div>
+      <span class="crew__stamp">YOUR CITY. YOUR STORY.</span>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="footer__background"><img src="assets/images/city-night.webp" alt="" loading="lazy" decoding="async" /></div>
+    <div class="container footer__content"><div class="footer__top"><span>GRAND THEFT AIdol / $GTA</span><a href="#home">BACK TO TOP ↑</a></div><div class="footer__big">VICE NEVER<br/><em>SLEEPS.</em></div><div class="footer__bottom"><div class="footer__mark">G<span>★</span>TA</div><span>© <span id="year">2026</span> GRAND THEFT AIdol</span><span>INDEPENDENT MEME ART CONCEPT. NO OFFICIAL AFFILIATION.</span></div></div>
+  </footer>
+
+  <dialog class="gallery-dialog" id="galleryDialog" aria-label="Vice City image gallery"><button class="gallery-dialog__close" id="closeGallery" type="button" aria-label="Close gallery">×</button><img id="galleryImage" src="assets/images/city-nightlife.webp" alt=""/><div class="gallery-dialog__bottom"><button type="button" id="galleryPrev" aria-label="Previous picture">←</button><span id="galleryCaption">01 / THE STRIP</span><button type="button" id="galleryNext" aria-label="Next picture">→</button></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
