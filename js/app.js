@@ -149,7 +149,7 @@
     reducedMotion = !reducedMotion;
     try { localStorage.setItem('gta-reduce-motion', String(reducedMotion)); } catch (_) { /* optional */ }
     updateMotionButton();
-    showToast(reducedMotion ? 'ANIMATIONS REDUCED' : 'ANIMATIONS ENABLED');
+    showToast(reducedMotion ? 'Animations reduced' : 'Animations enabled');
   });
 
   // Token configuration. No fictional contract address, links, metrics, or launch claims.
@@ -193,13 +193,13 @@
 
   const social = $('#communityLinks');
   if (social) {
-    const links = [{ name: 'X COMMUNITY', value: cleanUrl(settings.xUrl) }, { name: 'TELEGRAM CREW', value: cleanUrl(settings.telegramUrl) }];
+    const links = [{ name: 'X community', value: cleanUrl(settings.xUrl) }, { name: 'Telegram crew', value: cleanUrl(settings.telegramUrl) }];
     social.replaceChildren();
     links.forEach(({ name, value }) => {
       const item = doc.createElement(value ? 'a' : 'span');
       item.className = `btn btn--outline${value ? '' : ' btn--pending'}`;
       item.dataset.social = name.startsWith('X') ? 'x' : 'telegram';
-      item.textContent = value ? name + ' ↗' : name + ' / COMING SOON';
+      item.textContent = value ? name + ' ↗' : name + ' / Coming soon';
       if (value) { item.href = value; item.target = '_blank'; item.rel = 'noopener noreferrer'; }
       social.appendChild(item);
     });
@@ -207,10 +207,10 @@
 
   // Mission carousel/tabpanel is keyboard-operable.
   const missions = [
-    { eyebrow: 'CHAPTER 01 — THE ARRIVAL', title: 'WELCOME TO<br>VICE CITY.', desc: "Claudia touches down. A new chapter opens. The city doesn't know what's coming.", image: 'mission-arrival.webp', alt: 'Claudia arriving beside a private jet at sunset in a neon coastal city.' },
-    { eyebrow: 'CHAPTER 02 — THE TAKEOVER', title: 'NO MORE<br>PERMISSION.', desc: 'A skyline-size projection. Every screen is hers. The algorithm just crossed into the real world.', image: 'mission-takeover.webp', alt: 'Claudia overlooking an illuminated city from a rooftop as her giant projection lights up the skyline.' },
-    { eyebrow: 'CHAPTER 03 — FIVE STARS', title: 'TURN UP<br>THE HEAT.', desc: 'Police lights, an open ocean, and the whole city watching. The fictional chase is on.', image: 'mission-five-stars.webp', alt: 'A pink speedboat racing across the bay pursued by police boats and helicopters.' },
-    { eyebrow: 'CHAPTER 04 — CITY LEGEND', title: 'BUILT TO<br>BE REMEMBERED.', desc: 'The lights never fade. A star that started as code becomes the legend of Vice City.', image: 'mission-city-legend.webp', alt: 'Claudia above a waterfront skyline illuminated by a giant neon portrait of her.' }
+    { eyebrow: 'Chapter 01 — The arrival', title: 'Welcome to<br>Vice City.', desc: "Claudia touches down. A new chapter opens. The city doesn't know what's coming.", image: 'mission-arrival.webp', alt: 'Claudia arriving beside a private jet at sunset in a neon coastal city.' },
+    { eyebrow: 'Chapter 02 — The takeover', title: 'No more<br>permission.', desc: 'A skyline-size projection. Every screen is hers. The algorithm just crossed into the real world.', image: 'mission-takeover.webp', alt: 'Claudia overlooking an illuminated city from a rooftop as her giant projection lights up the skyline.' },
+    { eyebrow: 'Chapter 03 — Five stars', title: 'Turn up<br>the heat.', desc: 'Police lights, an open ocean, and the whole city watching. The fictional chase is on.', image: 'mission-five-stars.webp', alt: 'A pink speedboat racing across the bay pursued by police boats and helicopters.' },
+    { eyebrow: 'Chapter 04 — City legend', title: 'Built to<br>be remembered.', desc: 'The lights never fade. A star that started as code becomes the legend of Vice City.', image: 'mission-city-legend.webp', alt: 'Claudia above a waterfront skyline illuminated by a giant neon portrait of her.' }
   ];
   const missionTabs = $$('.mission-tab');
   const missionView = $('#missionPanel');
@@ -256,14 +256,14 @@
 
   // Lightbox: image gallery with keyboard arrows, ESC, backdrop click, and focus restoration.
   const galleryItems = [
-    { title: '01 / THE STRIP', file: 'city-nightlife.webp', alt: 'Neon nightlife street, sports cars and moonlit coastal skyline' },
-    { title: '02 / ABOVE THE CITY', file: 'rooftop-sunset.webp', alt: 'Claudia looking at a glowing bay from a rooftop at sunset' },
-    { title: '03 / AFTER HOURS', file: 'nightclub.webp', alt: 'Claudia at a neon nightclub bar overlooking the waterfront' },
-    { title: '04 / THE BLUE HOUR', file: 'city-night.webp', alt: 'Moonlit Vice City skyline reflected on the ocean' },
-    { title: '05 / THE ARRIVAL', file: 'arrival-supercar.webp', alt: 'Claudia leaning against her pink sports car' },
-    { title: '06 / POPSTAR', file: 'stage-idol.webp', alt: 'Claudia performing onstage' },
-    { title: '07 / THE HEAT', file: 'police-chase.webp', alt: 'High-speed nighttime police pursuit' },
-    { title: '08 / THE DOSSIER', file: 'wanted-dossier.webp', alt: 'Vice City police dossier containing Claudia photographs' }
+    { title: '01 / The Strip', file: 'city-nightlife.webp', alt: 'Neon nightlife street, sports cars and moonlit coastal skyline' },
+    { title: '02 / Above the city', file: 'rooftop-sunset.webp', alt: 'Claudia looking at a glowing bay from a rooftop at sunset' },
+    { title: '03 / After hours', file: 'nightclub.webp', alt: 'Claudia at a neon nightclub bar overlooking the waterfront' },
+    { title: '04 / The blue hour', file: 'city-night.webp', alt: 'Moonlit Vice City skyline reflected on the ocean' },
+    { title: '05 / The arrival', file: 'arrival-supercar.webp', alt: 'Claudia leaning against her pink sports car' },
+    { title: '06 / Popstar', file: 'stage-idol.webp', alt: 'Claudia performing onstage' },
+    { title: '07 / The heat', file: 'police-chase.webp', alt: 'High-speed nighttime police pursuit' },
+    { title: '08 / The dossier', file: 'wanted-dossier.webp', alt: 'Vice City police dossier containing Claudia photographs' }
   ];
   const dialog = $('#galleryDialog');
   const galleryImage = $('#galleryImage');

@@ -1,0 +1,408 @@
+/* Typography and polish. Loaded after styles.css so these tokens win. */
+
+html { scroll-padding-top: 108px; }
+body { font-size: 1.0625rem; line-height: 1.6; color: var(--paper); }
+
+#story, #evidence, #wanted, #tokenomics, #idol, #missions, #archive, #crew { scroll-margin-top: 100px; }
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.8rem, 5.6vw, 5.35rem);
+  line-height: 0.92;
+  letter-spacing: -0.015em;
+  text-transform: none;
+  text-wrap: balance;
+}
+.display em,
+.episode--fame h3 em,
+.footer__big em {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 0.9;
+  padding-right: 0.08em;
+}
+.display--poster { text-transform: uppercase; letter-spacing: 0.02em; font-weight: 800; }
+.display--poster em { text-transform: none; }
+.display--glam { font-size: clamp(3.1rem, 6.2vw, 6rem); line-height: 0.9; }
+.display--editorial { font-weight: 600; }
+
+.eyebrow, .micro, .section-kicker {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: none;
+}
+.section-kicker { margin-bottom: 42px; color: #ff8ebf; }
+.section-kicker > span:last-child { color: #d5d6e2; }
+
+.btn, .header__cta, .text-link, .toast {
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: none;
+}
+.btn { font-size: 0.9rem; gap: 18px; min-height: 52px; }
+.header__cta { font-size: 0.875rem; letter-spacing: 0.04em; padding: 13px 16px; gap: 12px; }
+.text-link { font-size: 0.9rem; letter-spacing: 0.04em; gap: 16px; }
+.toast { font-size: 0.8125rem; }
+
+.icon-motion { width: 18px; height: 18px; display: block; }
+.icon-motion--off { display: none; }
+.icon-btn[aria-pressed="true"] .icon-motion--on { display: none; }
+.icon-btn[aria-pressed="true"] .icon-motion--off { display: block; }
+
+.brand { gap: 12px; min-width: 0; }
+.brand__logo, .footer__logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: none;
+  box-shadow: 0 0 0 1px #ff4ea866, 0 0 16px #ff2f9555;
+}
+.footer__logo { width: 58px; height: 58px; }
+.brand__name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.02rem;
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+.brand__name .brand__idol {
+  display: block;
+  margin-top: 1px;
+  color: var(--pink);
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.brand__idol em {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0;
+  font-size: 0.92em;
+}
+
+.nav { gap: clamp(14px, 1.6vw, 28px); }
+.nav a {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #f7f4f8e6;
+}
+.nav a:after { bottom: -8px; }
+
+.hero__status { margin-bottom: 22px; color: #d8fbff; font-size: 0.8125rem; }
+.hero__overline {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+  letter-spacing: 0;
+  text-transform: none;
+  color: #ffe7f4;
+  margin: 0 0 8px;
+}
+.hero__headline {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(4.35rem, 7.4vw, 7.9rem);
+  line-height: 0.86;
+  letter-spacing: -0.02em;
+  margin: 0 0 26px;
+  max-width: 8.6em;
+  filter: none;
+}
+.hero__headline > span {
+  text-transform: uppercase;
+  transform: none;
+  -webkit-text-stroke: 0;
+  letter-spacing: 0.012em;
+  font-weight: 800;
+}
+.hero__headline > .hero__headline-idol {
+  text-transform: none;
+  letter-spacing: 0;
+  background: none;
+  color: inherit;
+  text-shadow: none;
+  width: max-content;
+  align-items: baseline;
+  gap: 0;
+}
+.hero__ai {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: -0.03em;
+  line-height: 0.8;
+  background: linear-gradient(105deg, #ffe7a3 0%, #ffb15f 26%, #ff4d9a 76%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero__headline-idol em {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: -0.03em;
+  font-size: 0.86em;
+  margin-left: -0.02em;
+  line-height: 0.8;
+  background: linear-gradient(100deg, #fff 10%, #ffd4ea 55%, #ff8cbc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-right: 0.06em;
+}
+.hero__bottom { gap: 20px; }
+.hero__bottom p {
+  font-size: clamp(1.02rem, 1.15vw, 1.15rem);
+  line-height: 1.55;
+  letter-spacing: 0;
+  font-weight: 500;
+  max-width: 28rem;
+  color: #f6eef4;
+}
+.hero__buttons { gap: 12px; }
+.hero__side {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #ffffff73;
+}
+.hero__footer {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+.hero__content { padding-top: 72px; }
+
+.boot__brand { letter-spacing: -0.045em; font-weight: 800; }
+.boot__status { font-size: 0.75rem; letter-spacing: 0.14em; }
+.ticker__track span { font-weight: 700; letter-spacing: 0.03em; font-size: 1.35rem; }
+
+.story__intro,
+.episodes__head,
+.missions__head,
+.archive__head {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: clamp(28px, 4vw, 64px);
+}
+.story__lede { max-width: 24rem; margin: 0; }
+.episodes__head p, .missions__head p, .archive__head p { max-width: 22rem; margin: 0; }
+.story__lede p { font-size: 1.125rem; line-height: 1.65; color: #dddbe6; }
+.story__cinema-caption strong {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: clamp(2.6rem, 4.4vw, 4.4rem);
+}
+.story__cinema-caption > span,
+.story__cinema-top,
+.story__cinema-caption small {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+}
+
+.episodes__head p, .missions__head p, .archive__head p, .crew__description, .wanted__copy > p, .idol__inner p:not(.eyebrow) {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #e4e0ea;
+}
+.episode__shade { background: linear-gradient(180deg, #02020922 10%, #020209d8 78%, #020209f5); }
+.episode__number, .episode__bottom > span {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+.episode__bottom h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 3.5vw, 4.1rem);
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+.episode--arrival h3 { font-weight: 700; letter-spacing: 0.01em; }
+.episode--fame h3 { font-weight: 600; }
+.episode--fame h3 em { font-size: 0.92em; color: #ffe4f4; }
+.episode--heat h3 { font-weight: 800; letter-spacing: 0.02em; text-transform: uppercase; }
+.episode__bottom p { font-size: 0.95rem; color: #f3eef2; }
+
+.wanted__copy .display { margin: 16px 0 22px; }
+.wanted__facts span {
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  color: #ddd8e2;
+  font-weight: 600;
+}
+.wanted__facts strong {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: 0.03em;
+}
+.wanted__notice {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  color: #f0d5e4;
+}
+
+.token__head .display { letter-spacing: -0.02em; }
+.token-stat__index, .token-stat small, .contract__label > span, .contract__status, .token__subnote, .token__cta-row > span {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  color: #d2d0dc;
+}
+.token-stat > strong {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.7rem, 2.15vw, 2.85rem);
+  line-height: 1;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+.contract__label > strong {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: clamp(1.05rem, 1.6vw, 1.45rem);
+  letter-spacing: 0.01em;
+}
+.contract__status { color: #ffb0d4; }
+.token__subnote strong { color: var(--cyan); }
+
+.idol__inner p:not(.eyebrow) { font-size: 1.08rem; max-width: 28rem; }
+.idol__vertical { font-size: 0.75rem; letter-spacing: 0.14em; font-weight: 600; }
+
+.mission-tab > span { font-size: 0.75rem; letter-spacing: 0.08em; font-weight: 700; }
+.mission-tab > strong {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.55rem, 2vw, 2.15rem);
+  line-height: 0.95;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.mission-tab > small { font-size: 0.78rem; letter-spacing: 0.03em; font-weight: 600; text-transform: none; color: #efeaf2; }
+.mission-tab.is-active { box-shadow: inset 0 0 0 1px #ff4d9a88; }
+.mission-view__copy > span { font-size: 0.78rem; letter-spacing: 0.1em; }
+.mission-view__copy h3 {
+  font-weight: 700;
+  font-size: clamp(2.7rem, 5vw, 4.6rem);
+  line-height: 0.9;
+  letter-spacing: -0.015em;
+  text-transform: none;
+}
+.mission-view__copy p { font-size: 1.02rem; line-height: 1.6; max-width: 28rem; }
+.missions__disclaimer {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  color: #bdbac8;
+  text-transform: none;
+}
+
+.archive-shot > span {
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: none;
+}
+.archive-shot > span b {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ffd0e8;
+}
+.archive__foot { font-size: 0.84rem; letter-spacing: 0.04em; font-weight: 600; color: #ddd8e4; }
+
+.crew__stamp { font-size: 0.75rem; letter-spacing: 0.12em; font-weight: 600; }
+.footer__top, .footer__bottom {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+.footer__big {
+  font-weight: 700;
+  font-size: clamp(4.2rem, 10vw, 8.4rem);
+  line-height: 0.86;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  margin: 56px 0 64px;
+}
+.footer__bottom > span:last-child { color: #f0e7ee; }
+
+@media (max-width: 1250px) {
+  .hero__side { display: none; }
+  .hero__headline { font-size: clamp(4rem, 9vw, 6.6rem); }
+  .nav { gap: 16px; }
+}
+
+@media (max-width: 1030px) {
+  .nav a {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 2.7rem);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1;
+  }
+  .header__cta { display: none; }
+  .token-stat > strong { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+}
+
+@media (max-width: 700px) {
+  .brand__logo { width: 42px; height: 42px; }
+  .brand__name { font-size: 0.78rem; }
+  .brand__name .brand__idol { font-size: 1.15rem; }
+  .section { padding: 76px 0; }
+  .section-kicker { margin-bottom: 28px; font-size: 0.75rem; }
+  .hero { height: auto; min-height: 100svh; }
+  .hero__content { padding-top: 108px; padding-bottom: 88px; }
+  .hero__overline { font-size: 1.25rem; }
+  .hero__headline { font-size: clamp(3.35rem, 16vw, 4.7rem); max-width: none; margin-bottom: 16px; }
+  .hero__bottom p { font-size: 1rem; max-width: 22rem; }
+  .hero__buttons .btn { min-height: 48px; font-size: 0.84rem; }
+  .story__intro, .episodes__head, .missions__head, .archive__head { display: block; }
+  .story__lede, .episodes__head p, .missions__head p, .archive__head p { max-width: none; margin-top: 18px; }
+  .display, .display--glam, .idol__inner .display, .missions__head .display, .archive__head .display, .crew__inner .display, .token__head .display, .wanted__copy .display {
+    font-size: clamp(2.55rem, 11vw, 3.5rem);
+  }
+  .episode__bottom h3, .episode--short .episode__bottom h3 { font-size: clamp(2.15rem, 8vw, 2.8rem); }
+  .story__cinema-caption strong { font-size: 2.3rem; }
+  .mission-view__copy h3 { font-size: clamp(2.4rem, 10vw, 3.1rem); }
+  .mission-tab > strong { font-size: 1.45rem; }
+  .footer__big { font-size: clamp(3.3rem, 15vw, 4.6rem); margin: 42px 0 48px; }
+  .token-stat > strong { font-size: clamp(1.45rem, 7vw, 1.9rem); }
+  .archive-shot > span { font-size: 0.75rem; }
+}
+
+@media (max-width: 390px) {
+  .hero__headline { font-size: clamp(3rem, 14.5vw, 3.6rem); }
+  .hero__buttons { width: 100%; }
+  .hero__buttons .btn { flex: 1 1 auto; justify-content: center; }
+  .token-stat > strong { font-size: 1.35rem; }
+}
