@@ -1,15 +1,13 @@
 /**
- * EDIT THIS FILE BEFORE LAUNCH.
- * All values below are safe pre-launch defaults. Never paste a private key here.
- * When the Ethereum token is deployed, add the PUBLIC contract address.
- * Official project links are intentionally blank because none were supplied.
+ * Public project details only. Never paste a private key here.
+ * uniswapUrl stays blank so the site builds an ETH -> token swap link from contractAddress.
  */
 window.GTA_SITE_CONFIG = Object.freeze({
   tokenName: 'Grand Theft AIdol',
   ticker: 'GTA',
   chain: 'ethereum',
-  contractAddress: '', // e.g. '0x...' (40 hexadecimal characters after 0x)
-  xUrl: '',             // e.g. 'https://x.com/YourOfficialAccount'
-  telegramUrl: '',      // e.g. 'https://t.me/YourOfficialCommunity'
-  uniswapUrl: ''         // leave blank to generate an ETH -> token swap URL from contractAddress
+  contractAddress: '0x0faeec0b49e31c6fef95dfd327ecf48206c2374d',
+  xUrl: 'https://x.com/grandtheftaidol',
+  telegramUrl: 'https://t.me/grandtheftaidol',
+  uniswapUrl: ''
 });
