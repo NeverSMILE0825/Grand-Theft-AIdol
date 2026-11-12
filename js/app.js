@@ -162,15 +162,14 @@
   };
   const contract = typeof settings.contractAddress === 'string' && /^0x[0-9a-fA-F]{40}$/.test(settings.contractAddress.trim()) ? settings.contractAddress.trim() : '';
   const contractText = $('#contractText');
-  const copyButton = $('#copyContract');
+  const copyButtons = $$('[data-copy-contract]');
   const contractStatus = $('#contractStatus');
   const tradeLink = $('#tradeLink');
   const tradeUrl = cleanUrl(settings.uniswapUrl) || (contract ? `https://app.uniswap.org/swap?chain=ethereum&inputCurrency=ETH&outputCurrency=${encodeURIComponent(contract)}` : '');
   if (contract) {
     contractText.textContent = contract;
     contractStatus.textContent = 'Ethereum mainnet · public address';
-    copyButton.disabled = false;
-    copyButton.addEventListener('click', async () => {
+    const copyContract = async () => {
       try {
         if (navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(contract);
         else {
@@ -179,6 +178,10 @@
         }
         showToast('Contract address copied');
       } catch (_) { showToast('Could not copy. Select the address instead.'); }
+    };
+    copyButtons.forEach((button) => {
+      button.disabled = false;
+      button.addEventListener('click', copyContract);
     });
   }
   if (contract && tradeUrl) {
